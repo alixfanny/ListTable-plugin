@@ -1,17 +1,33 @@
 {
-    "name": "listtable-plugin",
-    "version": "0.1.0",
-    "description": "ListTable est un plugin React conçu pour améliorer la gestion des tableaux de données dans les applications web. Ce plugin offre une variété de fonctionnalités clés, telles que l'affichage des données sous forme de tableaux, la pagination, la recherche globale dans les tableaux, ainsi que des fonctions de tri. Il est idéal pour les applications nécessitant une manipulation interactive et efficace des données tabulaires.",
-    "main": "ListTable.js",
-    "dependencies": {
-      "@fortawesome/fontawesome-svg-core": "^6.5.1",
-      "@fortawesome/free-solid-svg-icons": "^6.5.1",
-      "@fortawesome/react-fontawesome": "^0.2.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/alixfanny/ListTable-plugin.git"
-    },
-    "author": "fanny alix"
+  "name": "listtable-plugin",
+  "version": "0.1.0",
+  "description": "ListTable est un plugin React conçu pour améliorer la gestion des tableaux de données dans les applications web. Ce plugin offre une variété de fonctionnalités clés, telles que l'affichage des données sous forme de tableaux, la pagination, la recherche globale dans les tableaux, ainsi que des fonctions de tri. Il est idéal pour les applications nécessitant une manipulation interactive et efficace des données tabulaires.",
+  "main": "ListTable.js",
+  "dependencies": {
+    "@babel/cli": "^7.23.4",
+    "@babel/core": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
+    "@babel/preset-react": "^7.23.3",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alixfanny/ListTable-plugin.git"
+  },
+  "author": "fanny alix",
+  "bugs": {
+    "url": "https://github.com/alixfanny/ListTable-plugin/issues"
+  },
+  "homepage": "https://github.com/alixfanny/ListTable-plugin#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/babel src --out-file index.js"
+  },
+  "peerDependencies": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "license": "ISC"
 }
-  
