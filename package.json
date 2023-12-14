@@ -1,5 +1,5 @@
 {
-  "name": "listtable-plugin",
+  "name": "listtable",
   "version": "0.1.0",
   "description": "ListTable est un plugin React conçu pour améliorer la gestion des tableaux de données dans les applications web. Ce plugin offre une variété de fonctionnalités clés, telles que l'affichage des données sous forme de tableaux, la pagination, la recherche globale dans les tableaux, ainsi que des fonctions de tri. Il est idéal pour les applications nécessitant une manipulation interactive et efficace des données tabulaires.",
   "main": "ListTable.js",
