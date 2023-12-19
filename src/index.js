@@ -1,11 +1,34 @@
 import React, { useState } from 'react';
-import Pagination from './pagination';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faChevronUp, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faChevronLeft, faChevronRight, faChevronUp, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
-import '../css/table/table.css'
+import 'oc-listtable/src/table.css';
+import 'oc-listtable/src/pagination.css';
 
-function ListTable({headers, items, defaultItemsPerPage = 20}) {
+
+function Pagination({ totalItems, itemsPerPage, currentPage, onPageChange }) {
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+  
+    const handlePageChange = (newPage) => {
+      if (newPage >= 1 && newPage <= totalPages) {
+        onPageChange(newPage);
+      }
+    };
+  
+    return (
+      <div className="pagination">
+        <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
+        <FontAwesomeIcon icon={faChevronLeft} />
+        </button>
+        <span> {currentPage} sur {totalPages}</span>
+        <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+        <FontAwesomeIcon icon={faChevronRight} />
+        </button>
+      </div>
+    );
+}
+
+export function ListTable({headers, items, defaultItemsPerPage = 20}) {
     const isEmpty = items.length === 0;
 
     // Pagination variables
@@ -133,4 +156,3 @@ function ListTable({headers, items, defaultItemsPerPage = 20}) {
     );
 }
 
-export default ListTable
